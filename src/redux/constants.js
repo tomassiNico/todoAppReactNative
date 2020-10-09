@@ -1,0 +1,8 @@
+export const FETCHING_DATA = 'FETCHING_DATA';
+export const FETCHING_DATA_FAILURE = 'FETCHING_DATA_FAILURE';
+export const FETCHING_DATA_TODOS_SUCCESS = 'FETCHING_DATA_TODOS_SUCCESS';
+export const ADD_TODO = 'ADD_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
