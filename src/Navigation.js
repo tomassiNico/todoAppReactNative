@@ -1,19 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useDispatch, useSelector} from 'react-redux';
 import {Icon} from 'react-native-elements';
 import {logOut} from './redux/actions/auth';
 import LoginScreen from './screens/LoginScreen';
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import HomeScreen from './screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
