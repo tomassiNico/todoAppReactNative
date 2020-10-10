@@ -35,7 +35,7 @@ export const fetchTodoList = () => {
 
     fetchTodosData()
       .then(({data}) => {
-        const todos = data.slice(0,20);
+        const todos = data.slice(0, 15);
         dispatch(saveTodoList(todos));
       })
       .catch(() => dispatch(errorFetch()));

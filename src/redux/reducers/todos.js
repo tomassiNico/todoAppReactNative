@@ -46,8 +46,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         todos: [
-          ...state.todos.filter((todo) => todo.id !== action.payload.todo.id),
           action.payload.todo,
+          ...state.todos.filter((todo) => todo.id !== action.payload.todo.id),
         ],
       };
     default:

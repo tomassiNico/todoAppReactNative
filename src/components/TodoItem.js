@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {Icon} from 'react-native-elements';
 import {removeTodo} from '../redux/actions/todos';
+import { useNavigation } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
 
 const TodoItem = ({todoData}) => {
   const dispatch = useDispatch();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.item}>
@@ -37,7 +39,7 @@ const TodoItem = ({todoData}) => {
       <View style={styles.item_bottom}>
         <View style={styles.container}>
           <Icon
-            onPress={() => console.log('edit')}
+            onPress={() => navigation.push('Edit', { todoId: todoData.id})}
             name="pencil"
             type="font-awesome"
           />

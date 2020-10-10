@@ -7,6 +7,7 @@ import {Icon} from 'react-native-elements';
 import {logOut} from './redux/actions/auth';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import EditTodoScreen from './screens/EditTodoScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,21 +21,24 @@ const Navigation = () => {
         {!isLogged ? (
           <Stack.Screen name="Login" component={LoginScreen} />
         ) : (
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              headerRight: () => (
-                <View style={{marginHorizontal: 16}}>
-                  <Icon
-                    onPress={() => dispatch(logOut())}
-                    name="sign-out"
-                    type="font-awesome"
-                  />
-                </View>
-              ),
-            }}
-          />
+          <>
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{
+                headerRight: () => (
+                  <View style={{marginHorizontal: 16}}>
+                    <Icon
+                      onPress={() => dispatch(logOut())}
+                      name="sign-out"
+                      type="font-awesome"
+                    />
+                  </View>
+                ),
+              }}
+            />
+            <Stack.Screen name="Edit" component={EditTodoScreen} />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
