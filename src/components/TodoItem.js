@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {Icon} from 'react-native-elements';
-import {removeTodo} from './redux/actions/todos';
+import {removeTodo} from '../redux/actions/todos';
 
 const styles = StyleSheet.create({
   container: {
