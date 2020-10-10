@@ -33,9 +33,16 @@ export default (state = initialState, action) => {
         todos: action.payload.todos,
       };
     case ADD_TODO:
+      let newTodo = {...action.payload.todo, completed: false, userId: 1};
+      let id = Math.floor(Math.random() * 100);
+      const todoIds = state.todos.map((t) => t.id);
+      if (todoIds.includes(id)) {
+        id = Math.floor(Math.random() * 100);
+      }
+      newTodo = {...newTodo, id: id};
       return {
         ...state,
-        todos: [...state.todos, action.payload.todo],
+        todos: [newTodo, ...state.todos],
       };
     case REMOVE_TODO:
       return {
