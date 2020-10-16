@@ -15,3 +15,4 @@
 * Edición de un todo
 * Agregar un nuevo todo
 * Borrar todo
+* Se agrega posiblidad de ejecutar con Debugger de redux (tener en cuenta de instalar https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es) para correcto funcionamiento
